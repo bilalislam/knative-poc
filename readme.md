@@ -1,6 +1,7 @@
 ## install brew
 ```sh
 $ brew install kn # knative
+$ brew install knative-sandbox/kn-plugins/admin
 $ brew install hey # loadtest
 ```
 
@@ -40,7 +41,12 @@ $ kn service update hello \
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 $ helm repo update
 $ helm install prometheus prometheus-community/kube-prometheus-stack -n default -f values.yaml
+$ kubectl port-forward -n default svc/prometheus-operated 9090
+
+$ helm repo add grafana https://grafana.github.io/helm-charts
 $ kubectl apply -f https://raw.githubusercontent.com/knative-sandbox/monitoring/main/grafana/dashboards.yaml
+$ kubectl --namespace default port-forward $POD_NAME 3000 
+$ kubectl get secret --namespace default prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
 
