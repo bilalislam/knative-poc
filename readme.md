@@ -47,7 +47,10 @@ $ helm repo add grafana https://grafana.github.io/helm-charts
 $ kubectl apply -f https://raw.githubusercontent.com/knative-sandbox/monitoring/main/grafana/dashboards.yaml
 $ kubectl --namespace default port-forward $POD_NAME 3000 
 $ kubectl get secret --namespace default prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+$ https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json
 ```
+
+Note : May manually load from grafana dashboard  
 
 
 
@@ -56,6 +59,7 @@ $ kubectl get secret --namespace default prometheus-grafana -o jsonpath="{.data.
 $ hey -c 100 -n 200 -z 1m http://hello.default.127.0.0.1.sslip.io/
 $ kubectl get pods --watch
 ```
+
 
 ## references
 1. https://www.youtube.com/watch?v=fLcLgL53gqQ
