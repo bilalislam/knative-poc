@@ -11,7 +11,7 @@ spec:
             - containerPort: 8080
           env:
             - name: TARGET
-              value: "çiğdem"
+              value: "bilal"
   traffic:
   - latestRevision: true
     percent: 50
