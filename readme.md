@@ -48,6 +48,7 @@ $ kubectl apply -f https://raw.githubusercontent.com/knative-sandbox/monitoring/
 $ kubectl --namespace default port-forward $POD_NAME 3000 
 $ kubectl get secret --namespace default prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 $ https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json
+$ argocd git ssh pass : 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
 ```
 
 Note : May manually load from grafana dashboard  
