@@ -1,7 +1,8 @@
 ## install brew
 ```sh
 $ brew install kn # knative
-$ brew install knative-sandbox/kn-plugins/admin
+$ brew install knative-sandbox/kn-plugins/admin - optional
+$ brew install knative-sandbox/kn-plugins/quickstart
 $ brew install hey # loadtest
 ```
 
